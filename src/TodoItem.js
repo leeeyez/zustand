@@ -1,4 +1,4 @@
-import useTodoStore from "../store/store";
+import useTodoStore from "./store/store";
 
 function TodoItem({ todo }) {
   const removeTodo = useTodoStore((state) => state.removeTodo);
@@ -11,9 +11,7 @@ function TodoItem({ todo }) {
         checked={todo.completed}
         onChange={() => toggleTodo(todo.id)}
       />
-      <span className={`todo-title ${todo.completed ? "completed" : ""}`}>
-        {todo.title}
-      </span>
+      <span>{todo.title}</span>
       <button onClick={() => removeTodo(todo.id)}>Delete</button>
     </li>
   );

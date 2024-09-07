@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TodoItem from "./components/TodoItem";
+import TodoItem from "./TodoItem";
 import "./App.css";
 import useTodoStore from "./store/store";
 
