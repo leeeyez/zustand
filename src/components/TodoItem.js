@@ -5,7 +5,7 @@ function TodoItem({ todo }) {
   const toggleTodo = useTodoStore((state) => state.toggleTodo);
 
   return (
-    <li className="todo-item">
+    <li>
       <input
         type="checkbox"
         checked={todo.completed}
@@ -14,9 +14,7 @@ function TodoItem({ todo }) {
       <span className={`todo-title ${todo.completed ? "completed" : ""}`}>
         {todo.title}
       </span>
-      <button className="delete-button" onClick={() => removeTodo(todo.id)}>
-        Delete
-      </button>
+      <button onClick={() => removeTodo(todo.id)}>Delete</button>
     </li>
   );
 }

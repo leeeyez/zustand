@@ -16,18 +16,18 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div>
       <h1>Todo List</h1>
-      <div className="input-container">
+      <div>
         <input
           type="text"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Add a new todo"
+          placeholder="할 일을 추가해보세요."
         />
         <button onClick={handleAddTodo}>Add Todo</button>
       </div>
-      <ul className="todo-list">
+      <ul>
         {todos.map((todo) => (
           <TodoItem key={todo.id} todo={todo} />
         ))}
